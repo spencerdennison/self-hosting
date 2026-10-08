@@ -6,7 +6,7 @@ services:
     ports:
       - "2003:4533"
     volumes:
-      - "./data:data"
+      - "./data:/data"
       - "./music:/music:ro"
     networks:
       - proxy
