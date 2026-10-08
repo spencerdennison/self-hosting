@@ -1,0 +1,23 @@
+services:
+  qbittorrent:
+    container_name: qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
+    restart: unless-stopped
+    ports:
+      - "2004:2004"
+      - "6881:6881"
+      - "688:6881/udp"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - WEBUI_PORT=2004
+      - TORRENTING_PORT=6881
+    volumes:
+      - "./config:/config"
+      - "../navidrome/music:/downloads"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
