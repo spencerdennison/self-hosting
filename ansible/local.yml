@@ -1,4 +1,4 @@
-- name: Setup services server
+- name: setup services server
   hosts: localhost
   connection: local
   become: true
