@@ -1,6 +1,6 @@
 - name: Static IP
   ansible.builtin.template:
-    src: interfaces.j2
+    src: interface.j2
     dest: /etc/network/interfaces.d/10-static-network
     owner: root
     group: root
