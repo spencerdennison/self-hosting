@@ -1,0 +1,49 @@
+- name: Home
+  hide-desktop-navigation: true
+  columns:
+    - size: small
+      widgets:
+        - type: dns-stats
+          service: pihole-v6
+          url: https://dns.spencerdennison.com
+          password: ${WEBSERVER_API_PASSWORD}
+
+    - size: full
+      widgets:
+        - type: docker-containers
+          containers:
+            caddy:
+              name: Caddy
+              description: Proxy
+              icon: sh:caddy
+            glance:
+              name: Glance
+              description: Dashboard
+              icon: sh:glance
+              url: https://dashboard.spencerdennison.com
+            navidrome:
+              name: Navidrome
+              description: Music
+              icon: sh:caddy
+              url: https://music.spencerdennison.com
+            pihole:
+              name: Pi-hole
+              description: DNS
+              icon: sh:pi-hole
+              url: https://dns.spencerdennison.com
+            qbittorrent:
+              name: qBittorrent
+              description: Torrent
+              icon: sh:qbittorrent
+              url: https://torrent.spencerdennison.com
+
+    - size:
+      widgets:
+        - type: server-stats
+          servers:
+            - type: local
+              name: Server
+            - type: remote
+              name: Desktop
+              url: http://192.168.1.2:27973
+              token: ${AGENT_TOKEN
