@@ -46,4 +46,4 @@
             - type: remote
               name: Desktop
               url: http://192.168.1.2:27973
-              token: ${AGENT_TOKEN
+              token: ${AGENT_TOKEN}
