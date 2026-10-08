@@ -1,0 +1,16 @@
+services:
+  navidrome:
+    container_name: navidrome
+    image: deluan/navidrome:latest
+    restart: unless-stopped
+    ports:
+      - "2003:4533"
+    volumes:
+      - "./data:data"
+      - "./music:/music:ro"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
