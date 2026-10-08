@@ -1,0 +1,7 @@
+- name: Setup services server
+  hosts: localhost
+  connection: local
+  become: true
+
+  roles:
+    - network
