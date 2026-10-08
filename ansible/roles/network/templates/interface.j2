@@ -3,4 +3,4 @@ iface {{ ansible_default_ipv4.interface }} inet static
     address {{ address }}
     netmask {{ netmask }}
     gateway {{ gateway }}
-    dns-nameservers {{ dns-nameservers | join(' ') }}
+    dns-nameservers {{ dns_nameservers | join(' ') }}
