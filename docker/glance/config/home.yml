@@ -37,7 +37,7 @@
               icon: sh:qbittorrent
               url: https://torrent.spencerdennison.com
 
-    - size:
+    - size: small
       widgets:
         - type: server-stats
           servers:
