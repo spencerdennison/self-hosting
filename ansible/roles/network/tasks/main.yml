@@ -1,4 +1,4 @@
-- name: Static IP
+- name: set static ip
   ansible.builtin.template:
     src: interface.j2
     dest: /etc/network/interfaces.d/10-static-network
