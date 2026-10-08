@@ -1,6 +1,0 @@
-include:
-  - caddy/docker-compose.yml
-  - glance/docker-compose.yml
-  - navidrome/docker-compose.yml
-  - pihole/docker-compose.yml
-  - qbittorrent/docker-compose.yml
