@@ -1,6 +1,6 @@
 # Self-Hosting
 
-## Dependencies
+## Installation
 
 - Cloudflare domain not publicly accessible wildcard record using server IP
 - Do not specify root password during Debian install to ensure sudo installation
