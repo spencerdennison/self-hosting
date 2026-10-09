@@ -1,0 +1,4 @@
+- name: start container
+  community.docker.docker_compose_v2:
+    project_src: "{{ playbook_dir }}/../docker/caddy"
+    state: present
