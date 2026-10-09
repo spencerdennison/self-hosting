@@ -5,7 +5,7 @@
       - curl
     state: present
 
-- name: add docker repository
+- name: add repository
   ansible.builtin.deb822_repository:
     name: docker
     types: deb
@@ -16,7 +16,7 @@
     signed_by: https://download.docker.com/linux/debian/gpg
     state: present
 
-- name: install docker
+- name: install
   ansible.builtin.apt:
     pkg:
       - docker-ce
@@ -27,13 +27,13 @@
     state: present
     update_cache: true
 
-- name: start docker
+- name: start
   ansible.builtin.service:
     name: docker
     state: started
     enabled: true
 
-- name: Add user to docker group
+- name: add user to group
   user:
     name: administrator
     groups: docker
