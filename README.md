@@ -24,6 +24,12 @@ Generate Git SSH-Key
 ssh-keygen -t ed25519 -f ~/.ssh/git
 ```
 
+Setup SSH Agent key auto add
+
+```bash
+echo "AddKeysToAgent yes" > ~/.ssh/config
+```
+
 Add SSH-Key to SSH Agent
 
 ```bash
