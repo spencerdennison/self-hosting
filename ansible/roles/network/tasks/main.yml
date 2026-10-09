@@ -5,5 +5,10 @@
     owner: root
     group: root
     mode: '0644'
-  notify:
-    - restart networking
+
+- name: remove dhcp
+  ansible.builtin.lineinfile:
+    path: /etc/network/interfaces
+    regexp: '^iface {{ ansible_default_ipv4.interface }} inet dhcp'
+    state: absent
+  notify: restart networking
