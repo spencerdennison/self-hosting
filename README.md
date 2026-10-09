@@ -55,6 +55,12 @@ Add Git SSH-Key to GitHub (Secondary device required)
 gh auth login
 ```
 
+Install Ansible Galaxy collections
+
+```bash
+ansible-galaxy collection install community.docker
+```
+
 Run Ansible Pull
 
 ```bash
