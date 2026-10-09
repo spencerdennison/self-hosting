@@ -1,4 +1,10 @@
+- name: copy configuration
+  ansible.builtin.copy:
+    src: "{{ playbook_dir }}/../docker/caddy"
+    dest: /opt/docker/caddy
+    mode: '0644'
+
 - name: start container
   community.docker.docker_compose_v2:
-    project_src: "{{ playbook_dir }}/../docker/caddy"
-    state: present
+    project_src: /opt/docker/caddy
+    state: started
