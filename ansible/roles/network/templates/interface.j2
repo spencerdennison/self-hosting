@@ -6,6 +6,5 @@ iface {{ ansible_default_ipv4.interface }} inet static
     address {{ address }}
     netmask {{ netmask }}
     gateway {{ gateway }}
+    dns-domain {{ dns_domain }}
     dns-nameservers {{ dns_nameservers | join(' ') }}
-
-iface {{ ansible_default_ipv4.interface }} inet6 auto
