@@ -64,5 +64,5 @@ ansible-galaxy collection install community.docker
 Run Ansible Pull
 
 ```bash
-ansible-pull -U git@github.com:spencerdennison/self-hosting.git -f ansible/local.yml --ask-become-pass
+ansible-pull -U git@github.com:spencerdennison/self-hosting.git ansible/local.yml --ask-become-pass --ask-vault-pass
 ```
