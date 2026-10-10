@@ -10,7 +10,7 @@
     name: docker
     types: deb
     uris: https://download.docker.com/linux/debian
-    suites: "{{ ansible_distribution_release }}"
+    suites: '{{ ansible_distribution_release }}'
     components: stable
     architectures: amd64
     signed_by: https://download.docker.com/linux/debian/gpg
@@ -32,6 +32,10 @@
     name: docker
     state: started
     enabled: true
+
+- name: setup network
+  community.docker.docker_network:
+    name: '{{ docker_network }}'
 
 - name: add user to group
   user:
