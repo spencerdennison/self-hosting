@@ -27,14 +27,7 @@ ssh-keygen -t ed25519 -f ~/.ssh/git
 Setup SSH Agent key auto add
 
 ```bash
-echo "AddKeysToAgent yes" > ~/.ssh/config
-```
-
-Add SSH-Key to SSH Agent
-
-```bash
-eval $(ssh-agent)
-ssh-add ~/.ssh/git
+echo -e "Host *\n\tAddKeysToAgent yes\nHost github.com\n\tHostname\tgithub.com\n\tUser\tspencerdennison\n\tIdentityFile\t~/.ssh/git" > ~/.ssh/config
 ```
 
 Add Git SSH-Key to GitHub (Secondary device required)
@@ -66,5 +59,3 @@ Run Ansible playbooks
 ```bash
 ansible-playbook local.yml --ask-become-pass --ask-vault-pass
 ```
-
-Was using ansible-pull but --ask-vault-pass wouldn't prompt?
