@@ -43,7 +43,7 @@ Add Git SSH-Key to GitHub (Secondary device required)
 - 2: SSH
 - 3: ~/.ssh/git.pub
 - 4: services
-- 5: Login with a web browser (Wait, it will prompt for secondary device login)
+- 5: Login with a web browser
 
 ```bash
 gh auth login
