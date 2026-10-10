@@ -1,8 +1,12 @@
 - name: setup services server
   hosts: localhost
   connection: local
+  vars_files:
+    - vars/all.yml
+    - vars/secret.yml
   become: true
 
   roles:
     - network
     - docker
+    - caddy
