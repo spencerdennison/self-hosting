@@ -13,7 +13,7 @@
       - caddy_data:/data
       - caddy_config:/config
     networks:
-      - name: '{{ docker_network }}'
+      - name: '{{ network }}'
     env:
       CLOUDFLARE_API_TOKEN: '{{ cloudflare_api_token }}'
     state: started
