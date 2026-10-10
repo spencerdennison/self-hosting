@@ -67,4 +67,4 @@ Run Ansible playbooks
 ansible-playbook local.yml --ask-become-pass --ask-vault-pass
 ```
 
-Was using ansible-pull but only --ask-vault-pass wouldn't prompt?
+Was using ansible-pull but --ask-vault-pass wouldn't prompt?
