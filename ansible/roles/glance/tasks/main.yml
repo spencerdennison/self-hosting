@@ -7,8 +7,8 @@
     ports:
       - '2002:8080'
     volumes:
-      - '{{ playbook_dir }}/roles/glance/config:/app/config'
-      - '{{ playbook_dir }}/roles/glance/assets:/app/assets'
+      - '{{ playbook_dir }}/roles/glance/files/config:/app/config'
+      - '{{ playbook_dir }}/roles/glance/files/assets:/app/assets'
       - '/etc/localtime:/etc/localtime:ro'
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
     networks:
