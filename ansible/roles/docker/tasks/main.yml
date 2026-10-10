@@ -35,7 +35,7 @@
 
 - name: setup network
   community.docker.docker_network:
-    name: '{{ docker_network }}'
+    name: '{{ network }}'
 
 - name: add user to group
   user:
