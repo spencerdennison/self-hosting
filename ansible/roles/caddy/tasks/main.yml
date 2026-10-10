@@ -9,7 +9,7 @@
       - '443:443'
       - '443:443/udp'
     volumes:
-      - 'roles/caddy/files/Caddyfile:/etc/caddy/Caddyfile:ro'
+      - '{{ playbook_dir }}/roles/caddy/files/Caddyfile:/etc/caddy/Caddyfile:ro'
       - caddy_data:/data
       - caddy_config:/config
     networks:
