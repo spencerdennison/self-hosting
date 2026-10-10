@@ -2,6 +2,7 @@
   community.docker.docker_container:
     name: caddy
     image: ghcr.io/caddybuilds/caddy-cloudflare:latest
+    recreate: true
     restart: true
     ports:
       - '2000:80'
@@ -15,4 +16,4 @@
       - name: '{{ docker_network }}'
     env:
       CLOUDFLARE_API_TOKEN: '{{ cloudflare_api_token }}'
-    state: recreate
+    state: started
