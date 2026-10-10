@@ -1,15 +1,8 @@
 - name: set static ip
   ansible.builtin.template:
     src: interface.j2
-    dest: /etc/network/interfaces.d/20-static-network
+    dest: /etc/network/interfaces
     owner: root
     group: root
     mode: '0644'
-  notify: restart networking
-
-- name: remove dhcp
-  ansible.builtin.lineinfile:
-    path: /etc/network/interfaces
-    regexp: '^iface {{ ansible_default_ipv4.interface }} inet dhcp'
-    state: absent
   notify: restart networking
