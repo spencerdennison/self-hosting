@@ -5,6 +5,7 @@
     owner: root
     group: root
     mode: '0644'
+  notify: restart networking
 
 - name: remove dhcp
   ansible.builtin.lineinfile:
