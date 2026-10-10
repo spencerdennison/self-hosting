@@ -3,7 +3,7 @@
   connection: local
   vars_files:
     - vars/all.yml
-    - vars/secret.yml
+    - vars/vault.yml
   become: true
 
   roles:
