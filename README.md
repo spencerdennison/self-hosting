@@ -1,4 +1,4 @@
-# Self-Hosting
+# Services
 
 ## Installation
 
