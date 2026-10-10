@@ -1,0 +1,18 @@
+- name: start container
+  community.docker.docker_container:
+    name: caddy
+    image: ghcr.io/caddybuilds/caddy-cloudflare:latest
+    restart: unless-stopped
+    ports:
+      - '2000:80'
+      - '443:443'
+      - '443:443/udp'
+    volumes:
+      - /docker/caddy/Caddyfile:/opt/docker/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      - name: '{{ docker_network }}'
+    env:
+      - 'CLOUDFLARE_API_TOKEN={{ cloudflare_api_token }}'
+    state: started
