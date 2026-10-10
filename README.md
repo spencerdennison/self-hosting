@@ -37,12 +37,6 @@ eval $(ssh-agent)
 ssh-add ~/.ssh/git
 ```
 
-Add GitHub to known hosts
-
-```bash
-ssh -T git@github.com
-```
-
 Add Git SSH-Key to GitHub (Secondary device required)
 
 - 1: GitHub.com
