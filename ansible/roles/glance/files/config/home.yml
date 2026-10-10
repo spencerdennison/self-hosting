@@ -42,8 +42,8 @@
         - type: server-stats
           servers:
             - type: local
-              name: Server
+              name: services
             - type: remote
-              name: Desktop
-              url: http://192.168.1.2:27973
+              name: workstation
+              url: http://192.168.1.3:27973
               token: ${AGENT_TOKEN}
