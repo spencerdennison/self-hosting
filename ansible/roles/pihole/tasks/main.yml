@@ -1,0 +1,21 @@
+- name: start container
+  community.docker.docker_container:
+    name: pihole
+    image: pihole/pihole:latest
+    recreate: true
+    restart: true
+    ports:
+      - '53:53/tcp'
+      - '53:53/udp'
+      - '2001:80/tcp'
+    environment:
+      TZ: 'America/Denver'
+      FTLCONF_webserver_api_password: '{{ webserver_api_password }}'
+      FTLCONF_dns_listeningMode: 'ALL'
+      FTLCONF_misc_dnsmasq_lines: 'address=/*{{ domain }}/{{ ip }}'
+      FTLCONF_dns_upstreams: '1.1.1.1;1.0.0.1'
+    volumes:
+      - './pihole:/etc/pihole'
+    networks:
+      - name: '{{ docker_network }}'
+    state: started
