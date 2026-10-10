@@ -14,6 +14,6 @@
     networks:
       - name: '{{ network }}'
     env:
-      WEBSERVER_API_TOKEN: '{{ webserver_api_token }}'
+      WEBSERVER_API_TOKEN: '{{ webserver_api_password }}'
       AGENT_TOKEN: '{{ agent_token }}'
     state: started
