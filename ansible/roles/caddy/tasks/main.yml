@@ -14,5 +14,5 @@
     networks:
       - name: '{{ docker_network }}'
     env:
-      - 'CLOUDFLARE_API_TOKEN={{ cloudflare_api_token }}'
+      CLOUDFLARE_API_TOKEN: '{{ cloudflare_api_token }}'
     state: started
