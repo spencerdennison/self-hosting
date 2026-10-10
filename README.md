@@ -61,6 +61,12 @@ Clone repository
 git clone git@github.com:spencerdennison/services.git
 ```
 
+Change into Ansible directory
+
+```bash
+cd services/ansible
+```
+
 Run Ansible playbooks
 
 ```bash
