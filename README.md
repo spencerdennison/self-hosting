@@ -55,14 +55,16 @@ Add Git SSH-Key to GitHub (Secondary device required)
 gh auth login
 ```
 
-Install Ansible Galaxy collections
+Clone repository
 
 ```bash
-ansible-galaxy collection install community.docker
+git clone git@github.com:spencerdennison/services.git
 ```
 
-Run Ansible Pull
+Run Ansible playbooks
 
 ```bash
-ansible-pull -U git@github.com:spencerdennison/self-hosting.git ansible/local.yml --ask-become-pass --ask-vault-pass
+ansible-playbook local.yml --ask-become-pass --ask-vault-pass
 ```
+
+Was using ansible-pull but only --ask-vault-pass wouldn't prompt?
