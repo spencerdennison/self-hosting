@@ -1,0 +1,19 @@
+- name: start container
+  community.docker.docker_container:
+    name: glance
+    image: glanceapp/glance
+    recreate: true
+    restart: true
+    ports:
+      - '2002:8080'
+    volumes:
+      - '{{ playbook_dir }}/roles/glance/config:/app/config'
+      - '{{ playbook_dir }}/roles/glance/assets:/app/assets'
+      - '/etc/localtime:/etc/localtime:ro'
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+    networks:
+      - name: '{{ network }}'
+    env:
+      WEBSERVER_API_TOKEN: '{{ webserver_api_token }}'
+      AGENT_TOKEN: '{{ agent_token }}'
+    state: started
