@@ -17,5 +17,5 @@
     volumes:
       - './pihole:/etc/pihole'
     networks:
-      - name: '{{ docker_network }}'
+      - name: '{{ network }}'
     state: started
